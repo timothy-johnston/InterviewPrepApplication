@@ -1,0 +1,35 @@
+[x] read in from questions and keywords files
+[x] put data from above read-in in Questions objects --> QLibrary
+[x] write logic for no files existing case
+[ ] implement addQuestion method: allow a user to type a question and keywords. 
+[ ] implement a save question method. user added questions are saved to the data files.
+
+5-16-18
+Logic for "begin" command has been mostly implemented. Need to add in delay timer.
+Logic for "exit" command has been implemented.
+
+Next:
+Finish "begin" command logic (delay timer), press a button for hints (later --> when stories are included), "next" command to skip to next, "notes" command to add notes (consider making a new notes file).
+	Add in "options" command
+		After typing begin, user can just hit enter to begin or type "options" for some options
+			Only ask questions with some keywords, change timer length, etc;
+
+write "view" command logic
+
+write "add/edit" command logic
+
+As of 5-20-18
+View:  good to go
+
+6-2-18
+Implement:
+	Behavioral Mode vs Technical Mode
+		(Choose on startup, can change any time)
+	Anecdotes
+		Instead of stories. Will just be a property of Questions object.
+		Still need to do: Fix methods in Main to account for anecdotes / anecdotes file
+	Fix bug for when user enters a non-integer (try catch?)
+	These methods:
+		Edit keywords
+		Edit anecdotes
+
