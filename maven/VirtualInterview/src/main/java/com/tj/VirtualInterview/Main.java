@@ -1,4 +1,6 @@
 
+package com.tj.VirtualInterview;
+
 import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
@@ -165,7 +167,7 @@ public class Main {
     //initializeFiles: If user doesn't have saved data already, this creates a blank questions file, keywords file, and anecdotes file for writing to.
     public static void initializeFiles() {
         //File paths (*** can maybe pass these paths to the function from main program to avoid repetition? check)
-        File questionsFile = new File("src\\data\\questions.txt");
+        File questionsFile = new File("data\\questions.txt");
         File keywordsFile = new File("data\\keywords.txt");
         File anecdotesFile = new File("data\\anecdotes.txt");
         
@@ -173,6 +175,9 @@ public class Main {
         try {
             if (questionsFile.createNewFile()) {
                 System.out.println("new questions file created");
+                
+                
+                
             } else {
                 System.out.println("questions file already exists");
             }
