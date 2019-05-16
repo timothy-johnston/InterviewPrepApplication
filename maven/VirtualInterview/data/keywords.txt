@@ -1,0 +1,4 @@
+general, background
+success, teamwork
+failure, adversity
+communication, teamwork

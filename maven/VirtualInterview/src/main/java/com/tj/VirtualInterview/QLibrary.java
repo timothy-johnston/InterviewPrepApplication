@@ -24,9 +24,14 @@ public class QLibrary {
     public void addQuestionsFromFile(ArrayList text, ArrayList keywords, ArrayList anecdotes){
         //Loop over the text and keywords arraylists, creating a new question instance each time
         for (int i = 0; i < text.size(); i ++) {
-            Question question = new Question(text.get(i).toString(), keywords.get(i).toString(), anecdotes.get(i).toString());
+        	
+        	String questionText = (i < text.size() ? text.get(i).toString() : null);
+        	String keywordText = (i < keywords.size() ? keywords.get(i).toString() : null);
+        	String anecdoteText = (i < anecdotes.size() ? anecdotes.get(i).toString() : null);
+        	
+            Question question = new Question(questionText, keywordText, anecdoteText);
             
-            //Add the new Question intance to the questions arraylist
+            //Add the new Question instance to the questions arraylist
             this.questions.add(question);
         }
     }

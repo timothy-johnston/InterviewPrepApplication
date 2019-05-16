@@ -2,9 +2,11 @@
 package com.tj.VirtualInterview;
 
 import java.util.Scanner;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.ArrayList;
 //import java.util.logging.Level;
 //import java.util.logging.Logger;
@@ -176,7 +178,13 @@ public class Main {
             if (questionsFile.createNewFile()) {
                 System.out.println("new questions file created");
                 
-                
+                //Populate the questions file with some default questions
+                BufferedWriter writer = new BufferedWriter( new FileWriter(questionsFile));
+                writer.write("Tell me about yourself.\n");
+                writer.write("Tell me about a time where you contributed to a team achieving a milestone.\n");
+                writer.write("Have you ever failed to accomplish an iportant task on time? How did you handle this?\n");
+                writer.write("How do you handle project-related disagreements?\n");
+                writer.close();
                 
             } else {
                 System.out.println("questions file already exists");
@@ -189,6 +197,15 @@ public class Main {
         try {
             if (keywordsFile.createNewFile()) {
                 System.out.println("new keywords file created");
+                
+                //Populate keywords file with some default keywords
+                BufferedWriter writer = new BufferedWriter( new FileWriter(keywordsFile));
+                writer.write("general, background\n");
+                writer.write("success, teamwork\n");
+                writer.write("failure, adversity\n");
+                writer.write("communication, teamwork\n");
+                writer.close();
+                
             } else {
                 System.out.println("keywords file arleady exists");
             }
